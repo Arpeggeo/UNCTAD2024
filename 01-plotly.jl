@@ -24,4 +24,4 @@ dens = densitymapbox(lon = lon, lat = lat, radius = 4)
 
 ## display visualization
 
-plot(dens, layout)
+fig = plot(dens, layout)
