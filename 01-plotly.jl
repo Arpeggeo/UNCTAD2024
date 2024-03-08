@@ -6,6 +6,17 @@ using Statistics
 
 data = CSV.File("data/3303401.csv")
 
+dict = Dict(
+  1 => "Domicílio particular",
+  2 => "Domicílio coletivo",
+  3 => "Estabelecimento agropecuário",
+  4 => "Estabelecimento de ensino",
+  5 => "Estabelecimento de saúde",
+  6 => "Estabelecimento de outras finalidades",
+  7 => "Edificação em construção",
+  8 => "Estabelecimento religioso"
+)
+
 ## density map of coordinates
 
 lon = data.LONGITUDE
