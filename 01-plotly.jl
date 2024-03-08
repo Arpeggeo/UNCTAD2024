@@ -2,10 +2,12 @@ using CSV
 using PlotlyJS
 using Statistics
 
-## load IBGE data
+## load IBGE Censo 2022 coordinates
 
+# coordinates for Nova Friburgo
 data = CSV.File("data/3303401.csv")
 
+# map codes to types of address
 dict = Dict(
   1 => "Domicílio particular",
   2 => "Domicílio coletivo",
