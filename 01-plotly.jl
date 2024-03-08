@@ -2,14 +2,18 @@ using CSV
 using PlotlyJS
 using Statistics
 
-## load relevant data
+## load IBGE data
 
-address = CSV.File("data/3303401.csv")
+data = CSV.File("data/3303401.csv")
 
-## global map settings
+## density map of coordinates
 
-lon = address.LONGITUDE
-lat = address.LATITUDE
+lon = data.LONGITUDE
+lat = data.LATITUDE
+
+dens = densitymapbox(lon = lon, lat = lat, radius = 4)
+
+## visualization settings
 
 layout = Layout(
   mapbox_style = "open-street-map",
@@ -18,10 +22,6 @@ layout = Layout(
   mapbox_zoom = 10
 )
 
-## density map of addresses
-
-dens = densitymapbox(lon = lon, lat = lat, radius = 4)
-
-## display visualization
+## display figure
 
 fig = plot(dens, layout)
