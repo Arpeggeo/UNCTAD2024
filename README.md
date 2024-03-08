@@ -7,6 +7,5 @@ UNCTAD 2024 Workshop.
 - Install Julia v1.10 or later
 - Clone or download the repository
 - Follow the examples:
-  - `00-data.jl`
   - `01-plotly.jl`
   - `02-dash.jl`

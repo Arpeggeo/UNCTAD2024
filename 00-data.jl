@@ -1,6 +1,9 @@
 using GeoIO
+using CSV
 
 ## load data from IBGE and other sources
+
+address = CSV.File("data/raw/3303401.csv")
 
 address = GeoIO.load("data/raw/ibge/domicilios.csv", coords = ("LONGITUDE", "LATITUDE"))
 rivers = GeoIO.load("data/raw/friburgo/hidrografia_25k_limite_oficial.shp")
