@@ -27,13 +27,13 @@ key = [dict[k] for k in data.COD_ESPECIE]
 
 dens = densitymapbox(lat = lat, lon = lon,
                      customdata = key,
+                     radius = 4,
                      hovertemplate = """
                      <b>%{customdata}</b><br>
                      latitude: %{lat}<br>
                      longitude: %{lon}
                      <extra></extra>
-                     """,
-                     radius = 4)
+                     """)
 
 ## visualization settings
 
