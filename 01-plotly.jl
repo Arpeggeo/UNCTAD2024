@@ -23,8 +23,17 @@ dict = Dict(
 
 lon = data.LONGITUDE
 lat = data.LATITUDE
+key = [dict[k] for k in data.COD_ESPECIE]
 
-dens = densitymapbox(lon = lon, lat = lat, radius = 4)
+dens = densitymapbox(lat = lat, lon = lon,
+                     customdata = key,
+                     hovertemplate = """
+                     <b>%{customdata}</b><br>
+                     latitude: %{lat}<br>
+                     longitude: %{lon}
+                     <extra></extra>
+                     """,
+                     radius = 4)
 
 ## visualization settings
 
