@@ -29,6 +29,7 @@ dens = densitymapbox(lon = lon, lat = lat, radius = 4)
 ## visualization settings
 
 layout = Layout(
+  height = "800",
   mapbox_style = "open-street-map",
   mapbox_center_lon = median(lon),
   mapbox_center_lat = median(lat),
