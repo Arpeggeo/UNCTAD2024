@@ -25,9 +25,8 @@ lon = data.LONGITUDE
 lat = data.LATITUDE
 key = [dict[k] for k in data.COD_ESPECIE]
 
-dens = densitymapbox(lat = lat, lon = lon,
-                     customdata = key,
-                     radius = 4,
+dens = densitymapbox(lat = lat, lon = lon, customdata = key,
+                     radius = 4, colorscale = "YlOrRd",
                      hovertemplate = """
                      <b>%{customdata}</b><br>
                      latitude: %{lat}<br>
@@ -39,7 +38,10 @@ dens = densitymapbox(lat = lat, lon = lon,
 
 layout = Layout(
   height = "800",
-  mapbox_style = "open-street-map",
+  #mapbox_style = "mapbox://styles/mapbox/satellite-streets-v12",
+  #mapbox_style = "mapbox://styles/mapbox/streets-v12",
+  mapbox_style = "mapbox://styles/mapbox/navigation-night-v1",
+  mapbox_accesstoken = ENV["MAPBOX_TOKEN"],
   mapbox_center_lon = median(lon),
   mapbox_center_lat = median(lat),
   mapbox_zoom = 10
