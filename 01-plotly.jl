@@ -25,14 +25,14 @@ lon = data.LONGITUDE
 lat = data.LATITUDE
 key = [dict[k] for k in data.COD_ESPECIE]
 
-dens = densitymapbox(lat = lat, lon = lon, customdata = key,
-                     radius = 4, colorscale = "YlOrRd",
-                     hovertemplate = """
-                     <b>%{customdata}</b><br>
-                     latitude: %{lat}<br>
-                     longitude: %{lon}
-                     <extra></extra>
-                     """)
+trace = densitymapbox(lat = lat, lon = lon, customdata = key,
+                      radius = 4, colorscale = "YlOrRd",
+                      hovertemplate = """
+                      <b>%{customdata}</b><br>
+                      latitude: %{lat}<br>
+                      longitude: %{lon}
+                      <extra></extra>
+                      """)
 
 ## visualization settings
 
@@ -50,4 +50,4 @@ layout = Layout(
 
 ## display figure
 
-fig = plot(dens, layout)
+fig = plot(trace, layout)
