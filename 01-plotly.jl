@@ -38,6 +38,7 @@ dens = densitymapbox(lat = lat, lon = lon, customdata = key,
 
 layout = Layout(
   height = "800",
+  #mapbox_style = "open-street-map",
   #mapbox_style = "mapbox://styles/mapbox/satellite-streets-v12",
   #mapbox_style = "mapbox://styles/mapbox/streets-v12",
   mapbox_style = "mapbox://styles/mapbox/navigation-night-v1",
